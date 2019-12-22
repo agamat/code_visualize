@@ -1,0 +1,1 @@
+C:\loc\..package..\R>findstr "#" fc_filer.R > ../../fc_filer_comment.txt
