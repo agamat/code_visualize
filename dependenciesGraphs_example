@@ -1,0 +1,27 @@
+library("ibr")
+
+##devtools::install_github(repo = "datastorm-open/DependenciesGraphs")
+
+library(DependenciesGraphs)
+library(ggplot2) # A package I'm developing
+
+par(c("omd", "fig", "plt", "usr"))
+# Prepare data
+dep <- funDependencies(envir = "package:ggplot2","plot")
+
+# visualization
+plot(dep)
+#Explore your R with the shiny app
+launch.app()
+
+
+dep <- envirDependencies("package:ggplot2")
+plot(dep,block = TRUE)
+
+#  Dependencies between (installed) packages
+dep <- Pck.load.to.vis("plyr")
+plot(dep)
+
+
+dep <- Pck.load.to.vis(c("htmlwidgets", "shiny"))
+plot(dep)
