@@ -1,0 +1,5 @@
+library(ggplot2)
+library(microbenchmark)
+getS3method("autoplot", class = 'microbenchmark')
+getAnywhere(autoplot)
+getAnywhere(autoplot.microbenchmark)
